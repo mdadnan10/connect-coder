@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">ConnectCoder</string>
+    <string name="slogan">Connect Then Code</string>
+    <string name="sign_up">Don\'t have an account? </string>
+    <string name="login">Login</string>
+    <string name="signIn">SignUp</string>
+    <string name="already_login">Already have an account? </string>
+    <string name="connect_coder">Connect Coder</string>
+    <string name="password">New Password</string>
+    <string name="phone_no">Phone no</string>
+    <string name="email">Email</string>
+    <string name="username">Username</string>
+    <string name="full_name">Full Name</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="remember_me">Remember me</string>
+    <string name="login_heading">to get in touch with</string>
+    <string name="signup_heading">to connect with</string>
+    <string name="fp_slogan">Provide your account Email address we\'ll send you an email to reset your \npassword</string>
+    <string name="color_sign_up"><b> Sign up</b></string>
+    <string name="color_login"><b> Log in</b></string>
+    <string name="your_community">your community</string>
+    <string name="your_coders">your coders</string>
+    <string name="search"> <font size="17">Search</font></string>
+    <string name="code_hub">Code Hub</string>
+    <string name="notification">Notification</string>
+    <string name="bio">I am a proficient front end developer ans and Android developer. I love to design interactive ui.</string>
+    <string name="pass">Password</string>
+    <string name="profession">Profession</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

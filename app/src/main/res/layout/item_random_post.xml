@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:padding="16dp">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/randomPostUserImage"-->
+<!--            android:layout_width="42dp"-->
+<!--            android:layout_height="42dp"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:scaleType="centerCrop" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvRandomPostUserName"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_toEndOf="@+id/randomPostUserImage"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/randomPostCreatedAt"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/tvRandomPostUserName"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_toEndOf="@+id/randomPostUserImage"-->
+<!--            android:textSize="15sp" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/randomPostOptions"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:src="@drawable/ic_more" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/randomPostMessage"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/randomPostUserImage"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:textColor="@color/color_post"-->
+<!--            android:textSize="16sp" />-->
+
+<!--        <View-->
+<!--            android:id="@+id/view1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="1dp"-->
+<!--            android:layout_below="@+id/randomPostMessage"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:background="@color/edit_text_border_color" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/randomLikeBtn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/view1"-->
+<!--            android:layout_marginStart="15dp" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/randomLikeCount"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/view1"-->
+<!--            android:layout_marginStart="6dp"-->
+<!--            android:layout_toEndOf="@+id/randomLikeBtn"-->
+<!--            android:textColor="@color/color_grey" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/randomCommentBtn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/view1"-->
+<!--            android:layout_toStartOf="@+id/randomSharePost"-->
+<!--            android:layout_toEndOf="@+id/randomLikeCount"-->
+<!--            android:src="@drawable/ic_comment" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/randomSharePost"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/view1"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginEnd="15dp"-->
+<!--            android:src="@drawable/ic_share" />-->
+
+<!--        <View-->
+<!--            android:id="@+id/view2"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="1dp"-->
+<!--            android:layout_below="@+id/randomCommentBtn"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:background="@color/edit_text_border_color" />-->
+
+<!--    </RelativeLayout>-->
+
+</androidx.cardview.widget.CardView>
+

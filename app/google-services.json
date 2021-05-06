@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "505033947867",
+    "project_id": "connect-coder",
+    "storage_bucket": "connect-coder.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:505033947867:android:e0fa2199da0a2c50732afe",
+        "android_client_info": {
+          "package_name": "com.project.connectcoder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "505033947867-kkqal7pn85vogra9de029ri5afrjegro.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTKyvZL4fXuXW3vMt-0sCpdvhDvrkL3m8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "505033947867-kkqal7pn85vogra9de029ri5afrjegro.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

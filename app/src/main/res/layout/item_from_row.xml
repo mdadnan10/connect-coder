@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/edit_text_bg_color"
+    android:padding="10dp">
+
+    <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+        android:id="@+id/imgFromUser"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        app:siShape="@drawable/message_from_img_bg"
+        app:siSquare="true" />
+
+    <TextView
+        android:id="@+id/txtMessageFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:maxWidth="230dp"
+        android:layout_toStartOf="@+id/imgFromUser"
+        android:background="@drawable/message_from_bg"
+        android:padding="7dp"
+        android:textColor="@color/white"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/messageFromTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4:09 Am"
+        android:textSize="10sp"
+        android:layout_marginEnd="10dp"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/txtMessageFrom"
+        android:textColor="@color/time" />
+
+</RelativeLayout>

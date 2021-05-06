@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="55dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="15dp"
+        app:cardCornerRadius="50dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#AE272323" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Create New"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/edit_text_border_color" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp">
+
+
+        <ImageView
+            android:id="@+id/img_feed_post"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_feed_post" />
+
+        <TextView
+            android:id="@+id/btn_feed_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="18dp"
+            android:layout_toRightOf="@+id/img_feed_post"
+            android:text="Feed Post"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/btn_feed_post"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/edit_text_border_color" />
+
+        <ImageView
+            android:id="@+id/img_code_hub_post"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_below="@+id/img_feed_post"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/code_hub" />
+
+        <TextView
+            android:id="@+id/btn_code_hub_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_feed_post"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_toRightOf="@+id/img_code_hub_post"
+            android:text="Code Hub"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/btn_code_hub_post"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/edit_text_border_color" />
+
+
+<!--        <ImageView-->
+<!--            android:id="@+id/img_random"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_below="@+id/img_code_hub_post"-->
+<!--            android:layout_marginStart="17dp"-->
+<!--            android:layout_marginTop="37dp"-->
+<!--            android:src="@drawable/ic_random_post" />-->
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/btn_random"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/btn_code_hub_post"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginTop="40dp"-->
+<!--            android:layout_toRightOf="@+id/img_random"-->
+<!--            android:text="Random Post"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="17sp"-->
+<!--            android:layout_marginBottom="20dp"/>-->
+    </RelativeLayout>
+</LinearLayout>

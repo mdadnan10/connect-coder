@@ -246,9 +246,9 @@ class EditProfileActivity : AppCompatActivity() {
         val professionLayout = findViewById<View>(R.id.edit_profile_profession) as TextInputLayout
         val bioLayout = findViewById<View>(R.id.edit_profile_bio) as TextInputLayout
 
-        val name = edit_profile_name.editText?.text.toString().trim()
+        val name = edit_profile_name.editText?.text.toString().trim().capitalize()
         val userName = edit_profile_user_name.editText?.text.toString().trim()
-        val profession = edit_profile_profession.editText?.text.toString().trim()
+        val profession = edit_profile_profession.editText?.text.toString().trim().capitalize()
         val bio = edit_profile_bio.editText?.text.toString().trim()
 
         if (!validateFullName(name, nameLayout) || !validateUserName(

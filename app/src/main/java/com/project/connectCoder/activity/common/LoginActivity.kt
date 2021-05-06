@@ -32,7 +32,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
 
-public fun checkInterNet(context: Activity) {
+fun checkInterNet(context: Activity) {
 
     val dialog = AlertDialog.Builder(context)
     dialog.setTitle("Turn on mobile data")
@@ -187,7 +187,7 @@ class LoginActivity : AppCompatActivity() {
         val userName = "update ConnectCoderUser Name"
         val email = user?.email ?: "ccuser@gmail.com"
         val profession = "Developer"
-        val bio = "Hey i am a connect coder ConnectCoderUser"
+        val bio = "Hey i am a Connect Coder User"
         val profile = user?.photoUrl.toString()
 
         progressbar_layout_login.visibility = View.VISIBLE

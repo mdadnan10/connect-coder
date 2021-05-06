@@ -5,9 +5,9 @@ import android.app.Activity
 import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.content.pm.ActivityInfo
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -47,14 +47,14 @@ class ProfileFragment : Fragment() {
 
     var auth: FirebaseAuth = FirebaseAuth.getInstance()
     val currentUserId = auth.currentUser!!.uid
-    private var profileId: String? = null
+    lateinit var profileId: String
     private val userDao = UserDao()
     lateinit var profileView: View
     lateinit var postList: ArrayList<FeedPost>
     var codeHubList: ArrayList<CodeHubPosts>? = null
     lateinit var profileFeedPostAdapter: ProfileFeedAdapter
     lateinit var profileCodeHubAdapter: ProfileCodeHubAdapter
-    private lateinit var sendMessageUser : ConnectCoderUser
+    private lateinit var sendMessageUser: ConnectCoderUser
 
     @SuppressLint("SetTextI18n")
     override fun onCreateView(
@@ -69,9 +69,8 @@ class ProfileFragment : Fragment() {
         profileView = view
         val sharedPreferences = context?.getSharedPreferences("PREFS", Context.MODE_PRIVATE)
 
-        if (sharedPreferences != null) {
-            profileId = sharedPreferences.getString("userId", "none")
-        }
+        if (sharedPreferences != null)
+            profileId = sharedPreferences.getString("userId", currentUserId)!!
 
         if (profileId == currentUserId) {
             view.btn_edit_profile.text = "EDIT PROFILE"
@@ -98,9 +97,13 @@ class ProfileFragment : Fragment() {
             menu.show()
 
             menu.setOnMenuItemClickListener {
-                when(it.itemId) {
+                when (it.itemId) {
                     R.id.report ->
-                        Toast.makeText(context, "Thanks for reporting we will refer this account to our t&c.", Toast.LENGTH_LONG).show()
+                        Toast.makeText(
+                            context,
+                            "Thanks for reporting we will refer this account to our t&c.",
+                            Toast.LENGTH_LONG
+                        ).show()
                 }
                 return@setOnMenuItemClickListener true
             }
@@ -145,7 +148,7 @@ class ProfileFragment : Fragment() {
         return view
     }
 
-    companion object{
+    companion object {
         const val USER_KEY = "USER_KEY"
     }
 
@@ -213,7 +216,7 @@ class ProfileFragment : Fragment() {
 
         GlobalScope.launch(Dispatchers.IO) {
             val user =
-                userDao.getUserById(profileId!!).await().toObject(ConnectCoderUser::class.java)!!
+                userDao.getUserById(profileId).await().toObject(ConnectCoderUser::class.java)!!
             withContext(Dispatchers.Main) {
                 displayData(user, view)
             }
@@ -241,7 +244,7 @@ class ProfileFragment : Fragment() {
         activity?.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
         btn_open_drawer.setOnClickListener {
-            mainDrawer.openDrawer(GravityCompat.END);
+            mainDrawer.openDrawer(GravityCompat.END)
         }
 
         val `this` = context as Activity

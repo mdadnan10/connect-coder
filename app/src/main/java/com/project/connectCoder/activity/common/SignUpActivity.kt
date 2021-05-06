@@ -111,7 +111,8 @@ class SignUpActivity : AppCompatActivity() {
         return if (profession.isEmpty()) {
             layout.error = "Enter your profession like web dev"
             false
-        } else {
+        }
+        else {
             layout.error = null
             layout.isErrorEnabled = false
             true
@@ -143,10 +144,10 @@ class SignUpActivity : AppCompatActivity() {
         val professionLayout = findViewById<View>(R.id.createProfession) as TextInputLayout
         val passwordLayout = findViewById<View>(R.id.createPassword) as TextInputLayout
 
-        val name = etName.editText?.text.toString().trim()
+        val name = etName.editText?.text.toString().trim().capitalize()
         val userName = createUserName.editText?.text.toString().trim()
         val email = createEmail.editText?.text.toString().trim()
-        val profession = createProfession.editText?.text.toString().trim()
+        val profession = createProfession.editText?.text.toString().trim().capitalize()
         val password = createPassword.editText?.text.toString().trim()
 
         if (!validateFullName(name, nameLayout) || !validateUserName(
@@ -221,7 +222,7 @@ class SignUpActivity : AppCompatActivity() {
     ) {
 
         val currentUserId = FirebaseAuth.getInstance().currentUser?.uid ?: "current ConnectCoderUser"
-        val bio = "Hey i am a connect coder ConnectCoderUser"
+        val bio = "Hey i am a Connect Coder User"
         val profile = "https://firebasestorage.googleapis.com/v0/b/connect-coder.appspot.com/o/Default%20Images%2FDefault%20Images%2Fprofile.png?alt=media&token=0a7029fb-a18c-40f5-9a28-c4d845042f68"
 
         val user = ConnectCoderUser(currentUserId, name, userName, email, profession, bio, profile)

@@ -23,7 +23,7 @@ object ImagePicker {
         R.drawable.profile_bg_17
     )
 
-    var currentImage = 0;
+    var currentImage = 0
 
     fun getImage(): Int {
         currentImage = (currentImage + 1) % images.size

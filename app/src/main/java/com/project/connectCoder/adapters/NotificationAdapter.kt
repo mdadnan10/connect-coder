@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.project.connectCoder.R
@@ -14,6 +15,7 @@ import com.project.connectCoder.daos.CodeHubDao
 import com.project.connectCoder.daos.CommentDao
 import com.project.connectCoder.daos.FeedPostDao
 import com.project.connectCoder.daos.UserDao
+import com.project.connectCoder.fragment.ProfileFragment
 import com.project.connectCoder.model.CodeHubPosts
 import com.project.connectCoder.model.ConnectCoderUser
 import com.project.connectCoder.model.FeedPost
@@ -42,7 +44,14 @@ class NotificationAdapter(private val list: ArrayList<Notification>) :
 //        getCodeHubImage(holder.likedImage, notification.postId)
 
         holder.itemView.setOnClickListener {
-            Toast.makeText(context, "Clicked ${notification.uid}", Toast.LENGTH_SHORT).show()
+            val sharedPreferences = context.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit()
+            sharedPreferences.putString("userId", notification.uid).apply()
+
+            val transaction = context as FragmentActivity
+            val ft = transaction.supportFragmentManager.beginTransaction()
+            ft.replace(R.id.frame_layout, ProfileFragment())
+            ft.addToBackStack("notification")
+            ft.commit()
         }
 
     }

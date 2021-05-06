@@ -99,8 +99,8 @@ class MainActivity : AppCompatActivity() {
     private fun badgeClear(id : Int){
         val badgeDrawable = bottom_navigation.getBadge(id)
         if (badgeDrawable != null){
-            badgeDrawable?.isVisible = false
-            badgeDrawable?.clearNumber()
+            badgeDrawable.isVisible = false
+            badgeDrawable.clearNumber()
         }
 
     }

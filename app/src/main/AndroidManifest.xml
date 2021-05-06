@@ -17,7 +17,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ConnectCoder">
-        <activity android:name=".activity.insideMain.CommentActivity"></activity>
+        <activity android:name=".activity.insideMain.CommentActivity" />
         <activity android:name=".activity.messages.ChatLogActivity" />
         <activity android:name=".activity.messages.SelectUsers" />
         <activity android:name=".activity.messages.MessageActivity" />
@@ -29,7 +29,8 @@
             android:configChanges="orientation|screenSize|keyboardHidden" />
         <activity
             android:name=".activity.insideMain.CodeHubPostActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden" /> <!-- <activity -->
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <!-- <activity -->
         <!-- android:name=".activity.insideMain.RandomPostActivity" -->
         <!-- android:configChanges="orientation|screenSize|keyboardHidden" /> -->
         <activity

@@ -47,13 +47,6 @@ class CodeHubFragment : Fragment(), ICodeHubPostAdapter {
 
         view.tv_code_hub.setColors(R.color.color_primary, R.color.color_secondary)
 
-        view.btn_search_code_in_hub.setOnClickListener {
-
-            Toast.makeText(context as Activity, "Searching In Code Hub...", Toast.LENGTH_LONG)
-                .show()
-
-        }
-
         setUpCodeHubRecyclerView(view)
 
         return view

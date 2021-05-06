@@ -21,26 +21,26 @@ import com.project.connectCoder.R
 import com.project.connectCoder.fragment.ProfileFragment
 import com.project.connectCoder.model.ConnectCoderUser
 
-class SearchUsersAdapters(options : FirestoreRecyclerOptions<ConnectCoderUser>) :
-    FirestoreRecyclerAdapter<ConnectCoderUser, SearchUsersAdapters.SearchUsersViewHolder>(options) {
+class SearchUsersAdapters(private val list : ArrayList<ConnectCoderUser>) : RecyclerView.Adapter<SearchUsersAdapters.SearchUsersViewHolder>() {
 
     lateinit var context: Context
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SearchUsersViewHolder {
-        val viewHolder = SearchUsersViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_search_user, parent, false))
         context = parent.context
-        return viewHolder
+        return SearchUsersViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_search_user, parent, false))
     }
 
-    override fun onBindViewHolder(holder: SearchUsersViewHolder, position: Int, model: ConnectCoderUser) {
+    override fun onBindViewHolder(holder: SearchUsersViewHolder, position: Int) {
 
-            holder.userName.text = model.name
-            holder.userProfession.text = model.profession
-            Glide.with(holder.userImage.context).load(model.profile).into(holder.userImage)
+        val users = list[position]
+
+            holder.userName.text = users.name
+            holder.userProfession.text = users.profession
+            Glide.with(holder.userImage.context).load(users.profile).into(holder.userImage)
 
         holder.itemView.setOnClickListener {
             val sharedPreferences = context.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit()
-            sharedPreferences.putString("userId", model.uid).apply()
+            sharedPreferences.putString("userId", users.uid).apply()
 
             val transaction = context as FragmentActivity
             val ft = transaction.supportFragmentManager.beginTransaction()
@@ -51,6 +51,10 @@ class SearchUsersAdapters(options : FirestoreRecyclerOptions<ConnectCoderUser>) 
 
     }
 
+    override fun getItemCount(): Int {
+        return list.size
+    }
+
     class SearchUsersViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
 
         val userImage : ImageView = itemView.findViewById(R.id.searchUserImage)
@@ -58,4 +62,5 @@ class SearchUsersAdapters(options : FirestoreRecyclerOptions<ConnectCoderUser>) 
         val userProfession: TextView = itemView.findViewById(R.id.searchUserProfession)
 
     }
+
 }

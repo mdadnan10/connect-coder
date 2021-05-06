@@ -146,7 +146,7 @@ class CommentsAdapter(private val list : ArrayList<Comments>) : RecyclerView.Ada
             val user = it.toObject(ConnectCoderUser::class.java)
 
             userName.text = user!!.name
-            Glide.with(context).load(user!!.profile).into(commentUserImg)
+            Glide.with(context).load(user.profile).into(commentUserImg)
 
         }
 
